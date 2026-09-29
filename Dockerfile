@@ -17,9 +17,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application source code
 COPY . .
 
-# Expose port (default 8007)
-EXPOSE 8007
-ENV PORT=8007
+# Expose ports (Render standard 10000 and custom 8007)
+EXPOSE 8007 10000
+ENV PORT=10000
 ENV HOST=0.0.0.0
 
 CMD ["python", "run_metrotest.py"]
